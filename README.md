@@ -4,10 +4,14 @@ The [documentation site](https://docs.dnncommunity.org/) for the open source Con
 
 The project uses the `docfx` library to pull XML comments from the DNN Platform source code and combine that with articles written in Markdown to form the documentation for DNN.
 
-## Installing Git
+This page first explains how to use Git in contributing to DNN Docs. The second and last part does the same for Visual Studio.
+
+## Git
+
+### Installing Git
 If you do not have Git installed, you will need to install it first. You can find instructions at [Git's Installation Guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-## Setting Up the DNN Docs Project
+### Setting Up the DNN Docs Project
 The next step is to fork this repository from GitHub to your own GitHub repository in order to give you write access on your own copy (if you don't have a GitHub account, you can create a free one).
 Simply click the Fork button above to get started.
 
@@ -33,9 +37,9 @@ git remote add upstream https://github.com/DNNCommunity/DNNDocs
 
 Unless you are part of the DNNDocs core team, you will only have read access (you can only **pull**) to this remote.
 
-## Running the DNN Docs Project Locally
+### Running the DNN Docs Project Locally
 
-### .NET Framework Prerequisites
+#### .NET Framework Prerequisites
 You should ensure that you already have [.NET 5.0](https://dotnet.microsoft.com/download/dotnet) (used by the `build` project) and the "Developer Pack" for [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) (used by the custom `DocFx` plugins) installed on your machine before trying the build process.
 
 You should now be able to run the development version of the docs locally with the following command:
@@ -62,7 +66,7 @@ Serving "C:\dev\DNNDocs\_site" on http://localhost:8080
 
 You can now open <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> in your web browser to view your local DNNDocs app.
 
-## Contributing
+### Contributing
 You are now all setup to start your first contribution.
 
 First, it is recommended to create a new branch to collect your changes without touching the **main** branch, this will make it easier later when you will need to **pull** the latest changes from the **upstream** remote (the official repository). You can use any branch name that makes sense to you as long as it does not have spaces or special characters other than - and _. Popular naming conventions are something that describes the issue solved or simply the issue number. To create a new branch you can type the following command:
@@ -101,7 +105,7 @@ Now your changes are available in your **fork** of the repository for anyone to 
 
 **Congratulations, you just created your first pull request!**
 
-## Updating from upstream
+### Updating from Upstream
 
 A couple of days or weeks have passed and you are still all setup to continue contributing, but sice time has past, other awesome contributors have been working hard and now **upstream**, **origin** and your local **clone** may be out of sync with different content. Let's bring those back in sync. Remember how you can only read (**pull**) from the official repository (**upstream** remote) but you can read and write (**pull** and **push**) to your fork (**origin** remote). This means we will need to pull from upstream to your local clone and then push this back to your origin to get the 3 back in sync. But first we need to change our branch to the default (**main**) branch. Here is the series of commands to do what is explained in the paragraph:
 
@@ -113,5 +117,20 @@ git push
 
 Everything is now updated per the latest changes everywhere, you are ready for your next contribution, scroll up and repeat from the "create a branch for your changes" step, rinse and repeat.
 
-## Testing
+### Testing
 This project is tested with BrowserStack.
+
+
+## Microsoft Visual Studio (2026)
+
+The following 2 tutorials explain how to set Visual Studio 2026 up.
+As 'Repository location' use https://github.com/DNNCommunity/DNNDocs
+![VisualStudio2026 Clone DNN Docs Repository Screenshot](/images/VS26_CloneRepository_DNNDocs.png)
+- GitHub for Beginners #4: Clone a Repo with Visual Studio 2026
+https://www.youtube.com/watch?v=O5HEqGisp3s
+- GitHub for Beginners #5: Commit & Push with Visual Studio 2026 
+https://www.youtube.com/watch?v=28OyqZyd0iI
+
+After having set up Visual Studio in the 'Solution Explorer' switch to 'Folder View'.
+![VisualStudio2026 Folder View in Solution Explorer Screenshot](/images/VS26_SolutionExplorer_FolderView.png)
+Under the 'content' branch / folder you will find (the content of) the DNN Docs.
