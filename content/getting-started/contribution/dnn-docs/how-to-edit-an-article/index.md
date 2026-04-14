@@ -14,23 +14,23 @@ related-topics:
   2. **Markdown**: Docs uses markdown syntax to format the docs files. Markdown is simple to pick up on. Familiarize yourself with the [Markdown Guide to DocFx](xref:markdown-guide-to-docfx) before making updates to content. 
 
 
-Now that you've gotten DNN Docs running locally (congrats BTW!) we will talk through the steps for making an edit, previewing the edit, pushing it to your forked repo, then creating a Pull Request.
+Now that you've gotten DNN Docs running locally (congrats BTW!) we will talk through the steps for making an edit, previewing the edit, pushing it to your forked repo, then creating a Pull Request using Git.
 
-## Steps to Edit an Article & Create a Pull Request
+## Steps to Edit an Article & Create a Pull Request using Git
 
-1. Fork the [DNN Docs Repo](https://github.com/DNNCommunity/DNNDocs) into your own Repo.
+1. Fork the [DNN Docs Repo](https://github.com/DNNCommunity/DNNDocs) into your own Repo on Github.
    ![Fork DNN Docs Screenshot](/images/fork-screenshot.jpg)
 
 
 
-2. Set your remote repositories. We will use the terms "upstream" and "origin". When you originally cloned the repo (in the "Getting DNN Docs Running Locally" pre-requisite) the ```origin``` was added for you implicitly.
+2. Set your remote repositories. We will use the terms "upstream" and "origin". Note: when you originally cloned the repo locally (in the "Getting DNN Docs Running Locally" pre-requisite) the locally cloned repo was named ```origin``` implicitly (as well).
 
    Type ```git remote add upstream https://github.com/DNNCommunity/DNNDocs``` to add the main DNN Docs repo as your "upstream" repo
 
    > [!NOTE]
    > Remotes can be named anything you like. Find out your remotes by typing ```git remote -v```
 
-   Type ```git remote -v``` to list your remotes. If you are new to Git then you should have 2 remotes. Your ```origin``` and ```upstream``` where ```origin``` is your forked repo and your ```upstream``` is the main DNN Docs repo.
+   Type ```git remote -v``` to list your remotes. If you are new to Git then you should have 2 remotes. Your ```origin``` and ```upstream``` where ```origin``` is your forked repo and your ```upstream``` is the main DNN Docs repo; both on Github.
 
 3. Create an [Issue](https://github.com/DNNCommunity/DNNDocs/issues) on GitHub that corresponds with the edit you're working on by clicking the "New Issue" button in the browser. Be sure to include relevant information providing context to the issue in the description/comment section. This helps reviewers understand what you're working on. 
 
@@ -56,7 +56,7 @@ Now that you've gotten DNN Docs running locally (congrats BTW!) we will talk thr
 
 
 9. Use ```git commit -m [INSERT YOUR COMMIT MESSAGE HERE]``` to commit your files. The ```-m``` stands for "message". Replace the *INSERT YOUR COMMIT MESSAGE HERE* text with brief and relevant text summarizing your commit
-10. Use ```git push origin [INSERT A NEW BRANCH NAME HERE]``` to push your updated files to your repo. Replace the *INSERT A NEW BRANCH NAME HERE* with the name of your new branch
+10. Use ```git push origin [INSERT A NEW BRANCH NAME HERE]``` to push your updated files to your remote repo (on Github with name ```origin```). Replace the *INSERT A NEW BRANCH NAME HERE* with the name of your new branch. In this example ```issue-107```
 11. Go to your forked GitHub repo on GitHub.com. GitHub should detect the updated code and prompt you to make a pull request.
     ![Git compare and pull request screenshot](/images/git-compare-and-pull-request-screenshot.jpg)
 
@@ -69,3 +69,10 @@ Now that you've gotten DNN Docs running locally (congrats BTW!) we will talk thr
 
 > [!TIP]
 > Want more info on Git? Check out the free, online **[GitBook](https://git-scm.com/book/en/v2)**
+
+
+## Steps to Edit an Article & Create a Pull Request using Visual Studio
+1. Cloning the repository from Visual Studio, as described on [Get DNN Docs Running Locally page](xref:get-dnn-docs-running-locally), has forked the [DNN Docs Repo](https://github.com/DNNCommunity/DNNDocs) into your own Repo on Github.
+2. 'Set your remote repositories' is not necessary.
+3. Create an [Issue](https://github.com/DNNCommunity/DNNDocs/issues) on GitHub as described above under 3.
+4. Create a new branch for your work using Visual Studio menu item 'Git...New Branch..'
